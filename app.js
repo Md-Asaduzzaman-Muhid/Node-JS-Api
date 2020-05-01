@@ -8,9 +8,9 @@ require('dotenv/config');
 
 
 //Middleware
-app.use('/posts', ()=>{
-    console.log('you are in posts middleware coosole');
-});
+// app.use('/posts', ()=>{
+//     console.log('you are in posts middleware coosole');
+// });
 
 
 //Import Routes
@@ -25,10 +25,8 @@ app.get('/',(req,res)=>{
 
 
 //Connect to DB
-mongoose.connect(process.env.DB_CONNECTION,
-
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    () => console.log('connected to server'),
+mongoose.connect(process.env.DB_CONNECTION,{ useNewUrlParser: true, useUnifiedTopology: true },() => 
+    console.log('connected to DB'),
 );
 
 
