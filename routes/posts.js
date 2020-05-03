@@ -6,6 +6,7 @@ router.get('/',(req,res)=>{
     res.send('we are on posts');
 });
 router.post('/',(req,res) => {
+    //console.log(req.body);   
     const post = new Post({
         title: req.body.title,
         description: req.body.description
